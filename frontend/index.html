@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hotel Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Hotel Booking System</h1>
+
+    <!-- REGISTER -->
+    <div class="card" id="registerSection">
+        <h2>Register User</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="registerUser()">Register</button>
+
+        <p id="registerMsg"></p>
+    </div>
+
+    <!-- ROOMS -->
+    <div class="card hidden" id="roomSection">
+        <h2>Available Rooms</h2>
+
+        <div id="roomsList"></div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="card hidden" id="paymentSection">
+        <h2>Payment</h2>
+
+        <input type="number" id="amount" placeholder="Enter Amount">
+
+        <button onclick="makePayment()">Pay</button>
+
+        <p id="paymentMsg"></p>
+    </div>
+
+    <!-- REVIEW -->
+    <div class="card hidden" id="reviewSection">
+        <h2>Add Review</h2>
+
+        <input type="number" id="rating" placeholder="Rating 1-5">
+
+        <textarea id="comment" placeholder="Write Review"></textarea>
+
+        <button onclick="submitReview()">Submit Review</button>
+
+        <p id="reviewMsg"></p>
+    </div>
+
+    <!-- AI RECOMMENDATION -->
+    <div class="card" id="recommendSection" style="display:none;">
+
+        <div class="card">
+
+            <h2>AI Recommendation</h2>
+
+            <button onclick="getRecommendation()">
+                Get Smart Recommendation
+            </button>
+
+            <div id="recommendationResult"></div>
+
+        </div>
+
+        <div id="recommendationBox" style="display:none; margin-top:20px;">
+
+            <div style="
+            background:#f4f8ff;
+            border-left:6px solid #1877f2;
+            padding:15px;
+            border-radius:10px;
+        ">
+
+                <h3 id="roomName" style="margin:0;color:#1877f2;"></h3>
+
+                <p id="roomReason" style="margin-top:10px;"></p>
+
+                <div style="margin-top:15px;">
+                    ⭐ AI Match Score:
+                    <span id="matchScore"
+                          style="font-weight:bold;color:green;">
+                </span>
+                </div>
+
+                <div style="margin-top:10px;">
+                    ✔ Best Price <br>
+                    ✔ High Customer Rating <br>
+                    ✔ Fast Booking Availability
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+
+        <h2>📊 Analytics Dashboard</h2>
+
+        <button onclick="loadDashboard()">
+            Load Analytics
+        </button>
+
+        <div id="dashboardResult" style="margin-top:20px;"></div>
+
+    </div>
+
+</div>
+
+<script src="scrgit --versionipt.js"></script>
+
+</body>
+</html>
